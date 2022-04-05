@@ -6,10 +6,27 @@ import java.util.Set;
 
 public final class Mathmatics {
 
-    public static Set<BigInteger> getPrimeNumbers(final BigInteger number){
+    public static Set<BigInteger> getPrimeNumbers(BigInteger number){
         Set<BigInteger> ret = new HashSet<>();
 
-        BigInteger starter = new BigInteger("3");
+        while (number.mod(BigInteger.TWO).equals(BigInteger.ZERO)){
+            ret.add(BigInteger.TWO);
+            number = number.divide(BigInteger.TWO);
+        }
+
+        for(BigInteger i = new BigInteger("3"); i.compareTo(number.sqrt()) <= 0; i = i.add(BigInteger.TWO)){
+            while (number.mod(i).equals(BigInteger.ZERO)){
+                ret.add(i);
+                number = number.divide(i);
+            }
+        }
+
+        if(number.compareTo(BigInteger.TWO) >= 0){
+            ret.add(number);
+        }
+        return ret;
+
+/*        BigInteger starter = new BigInteger("3");
         while (starter.compareTo(number.sqrt()) <= 0){
             if (number.mod(starter).equals(BigInteger.ZERO)){
                 ret.add(starter);
@@ -17,7 +34,7 @@ public final class Mathmatics {
 
             starter = starter.add(BigInteger.TWO);
         }
-        return ret;
+        return ret;*/
     }
 
     public static Set<Integer> multipliesOfFive(final int number){

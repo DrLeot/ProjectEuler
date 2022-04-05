@@ -1,5 +1,6 @@
 package Util;
 
+import java.math.BigInteger;
 import java.util.Set;
 
 public class Various {
@@ -10,5 +11,9 @@ public class Various {
             result += number;
         }
         return result;
+    }
+
+    public static BigInteger getLargestInteger(Set<BigInteger> listOfNumbers){
+        return listOfNumbers.stream().max(BigInteger::compareTo).orElse(null);
     }
 }
