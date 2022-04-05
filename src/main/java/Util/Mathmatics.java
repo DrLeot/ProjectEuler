@@ -6,6 +6,19 @@ import java.util.Set;
 
 public final class Mathmatics {
 
+    public static boolean isPrime(int number){
+        if (number <= 1)
+            return false;
+
+        for (int i = 2; i < number; i++){
+            if (number % i == 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static Set<BigInteger> getPrimeNumbers(BigInteger number){
         Set<BigInteger> ret = new HashSet<>();
 

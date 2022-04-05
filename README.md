@@ -12,6 +12,8 @@ DONE     | <a href='https://projecteuler.net/problem=2'>2</a>  | <a href='about:
 DONE     | <a href='https://projecteuler.net/problem=3'>3</a>  | <a href='https://github.com/DrLeot/ProjectEuler/tree/master/src/main/java/Problem_3'>Largest prime factor</a>
 DONE     | <a href='https://projecteuler.net/problem=4'>4</a>  | <a href='https://github.com/DrLeot/ProjectEuler/tree/master/src/main/java/Problem_4'>Largest palindrome product</a>
 DONE     | <a href='https://projecteuler.net/problem=5'>5</a>  | <a href='https://github.com/DrLeot/ProjectEuler/tree/master/src/main/java/Problem_5'>Smallest multiple</a>
+DONE     | <a href='https://projecteuler.net/problem=6'>6</a>  | <a href='https://github.com/DrLeot/ProjectEuler/tree/master/src/main/java/Problem_6'>Sum square difference</a>
+DONE     | <a href='https://projecteuler.net/problem=7'>7</a>  | <a href='https://github.com/DrLeot/ProjectEuler/tree/master/src/main/java/Problem_7'>10001st prime</a>
 
 <h1>Outro</h1>
 tbd
