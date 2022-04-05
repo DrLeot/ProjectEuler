@@ -1,9 +1,24 @@
 package Util;
 
+import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Set;
 
-public final class Math {
+public final class Mathmatics {
+
+    public static Set<BigInteger> getPrimeNumbers(final BigInteger number){
+        Set<BigInteger> ret = new HashSet<>();
+
+        BigInteger starter = new BigInteger("3");
+        while (starter.compareTo(number.sqrt()) <= 0){
+            if (number.mod(starter).equals(BigInteger.ZERO)){
+                ret.add(starter);
+            }
+
+            starter = starter.add(BigInteger.TWO);
+        }
+        return ret;
+    }
 
     public static Set<Integer> multipliesOfFive(final int number){
         return multipliesOf(5,number);
