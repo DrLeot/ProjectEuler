@@ -26,15 +26,20 @@ public final class Mathmatics {
         }
         return ret;
 
-/*        BigInteger starter = new BigInteger("3");
-        while (starter.compareTo(number.sqrt()) <= 0){
-            if (number.mod(starter).equals(BigInteger.ZERO)){
-                ret.add(starter);
-            }
+    }
 
-            starter = starter.add(BigInteger.TWO);
+    public static boolean isNumberPalindrom( int number){
+        int numberForward = number;
+        int numberReversed = 0;
+        int tmp;
+
+        while(numberForward>0){
+            tmp = numberForward%10;
+            numberReversed = (numberReversed*10) + tmp;
+            numberForward = numberForward/10;
         }
-        return ret;*/
+
+        return number == numberReversed;
     }
 
     public static Set<Integer> multipliesOfFive(final int number){
