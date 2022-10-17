@@ -11,6 +11,10 @@ public class Prime {
         preCalculateIndex(precalcIndex);
     }
 
+    public ArrayList<Integer> getPrimes(){
+        return new ArrayList<Integer>(primes.values());
+    }
+
     public void preCalculateIndex(final int index){
         for(int i=1; i<Integer.MAX_VALUE; i++){
             if(Mathmatics.isPrime(i)){
